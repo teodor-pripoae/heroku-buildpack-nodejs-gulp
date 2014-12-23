@@ -113,6 +113,7 @@ rm -rf "$build_dir/.node-gyp"
 rm -rf "$build_dir/.npm"
 
 if [ ! -e $build_dir/config.coffee ]; then
+  status "Copying $build_dir/config.sample.coffee to $build_dir/config.coffee"
   cp $build_dir/config.sample.coffee $build_dir/config.coffee
 fi
 
