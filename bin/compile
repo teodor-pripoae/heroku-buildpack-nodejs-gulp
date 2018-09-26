@@ -90,9 +90,9 @@ status "Cleaning up node-gyp and npm artifacts"
 rm -rf "$build_dir/.node-gyp"
 rm -rf "$build_dir/.npm"
 
-if [ ! -e $build_dir/config.coffee ]; then
-  status "Copying $build_dir/config.sample.coffee to $build_dir/config.coffee"
-  cp $build_dir/config.sample.coffee $build_dir/config.coffee
+if [ ! -e $build_dir/config.js ]; then
+  status "Copying $build_dir/config.sample.js to $build_dir/config.js"
+  cp $build_dir/config.sample.js $build_dir/config.js
 fi
 
 # If Procfile is absent, try to create one using `npm start`
